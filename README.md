@@ -1,6 +1,8 @@
 # cutaway
 [Hey Peter, remember that time...](https://tvtropes.org/pmwiki/pmwiki.php/CutawayGag/FamilyGuy)
 
+![Iraq Lobster](.assets/iraq_lobster.gif)
+
 I have a friend who stores a good amount of video of us hanging out online. The goal of this project is to create a simple video search engine to get clips from a text search. This project will rely on `ImageBind`.
 > The model learns a single embedding, or shared representation space, not just for text, image/video, and audio, but also for sensors that record depth (3D), thermal (infrared radiation), and inertial measurement units (IMU), which calculate motion and position.
 
