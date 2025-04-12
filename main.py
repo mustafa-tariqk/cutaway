@@ -1,4 +1,4 @@
-from ImageBind import imagebind
+import imagebind
 
 def main():
     imagebind.imagebind_model
