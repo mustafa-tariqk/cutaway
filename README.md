@@ -9,6 +9,15 @@ I have a friend who stores a good amount of video of us hanging out online. The 
 ## Requirements
 - Python 3.10 x86_64
 
+For MacOS:
+Some dependencies aren't ARM ready. Use Rosetta 2.
+```sh
+softwareupdate --install-rosetta
+arch -x86_64 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+arch -x86_64 brew install python@3.10
+uv venv --python /usr/local/opt/python@3.10/bin/python3.10
+uv run main.py
+```
 
 ## Citations
 - [Creating an In-Video Search System](https://suyashthakurblog.hashnode.dev/creating-an-in-video-search-system)
