@@ -4,7 +4,14 @@
 I have a friend who stores a good amount of video of us hanging out online. The goal of this project is to create a simple video search engine to get clips from a text search. This project will rely on `ImageBind`.
 > The model learns a single embedding, or shared representation space, not just for text, image/video, and audio, but also for sensors that record depth (3D), thermal (infrared radiation), and inertial measurement units (IMU), which calculate motion and position.
 
-[ImageBind Repo](https://github.com/facebookresearch/ImageBind)
+## Requirements
+- Python 3.10 x86_64
+
+
+## Citations
+- [Creating an In-Video Search System](https://suyashthakurblog.hashnode.dev/creating-an-in-video-search-system)
+
+- [ImageBind Repo](https://github.com/facebookresearch/ImageBind)
 ```
 @inproceedings{girdhar2023imagebind,
   title={ImageBind: One Embedding Space To Bind Them All},
