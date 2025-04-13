@@ -3,10 +3,19 @@ import torch
 from imagebind.models import imagebind_model
 from imagebind.models.imagebind_model import ModalityType
 
+
 def main():
-    text_list=["A dog.", "A car", "A bird"]
-    image_paths=[".assets/dog_image.jpg", ".assets/car_image.jpg", ".assets/bird_image.jpg"]
-    audio_paths=[".assets/dog_audio.wav", ".assets/car_audio.wav", ".assets/bird_audio.wav"]
+    text_list = ["A dog.", "A car", "A bird"]
+    image_paths = [
+        ".assets/dog_image.jpg",
+        ".assets/car_image.jpg",
+        ".assets/bird_image.jpg",
+    ]
+    audio_paths = [
+        ".assets/dog_audio.wav",
+        ".assets/car_audio.wav",
+        ".assets/bird_audio.wav",
+    ]
 
     device = "cuda:0" if torch.cuda.is_available() else "cpu"
 
@@ -27,15 +36,21 @@ def main():
 
     print(
         "Vision x Text: ",
-        torch.softmax(embeddings[ModalityType.VISION] @ embeddings[ModalityType.TEXT].T, dim=-1),
+        torch.softmax(
+            embeddings[ModalityType.VISION] @ embeddings[ModalityType.TEXT].T, dim=-1
+        ),
     )
     print(
         "Audio x Text: ",
-        torch.softmax(embeddings[ModalityType.AUDIO] @ embeddings[ModalityType.TEXT].T, dim=-1),
+        torch.softmax(
+            embeddings[ModalityType.AUDIO] @ embeddings[ModalityType.TEXT].T, dim=-1
+        ),
     )
     print(
         "Vision x Audio: ",
-        torch.softmax(embeddings[ModalityType.VISION] @ embeddings[ModalityType.AUDIO].T, dim=-1),
+        torch.softmax(
+            embeddings[ModalityType.VISION] @ embeddings[ModalityType.AUDIO].T, dim=-1
+        ),
     )
 
 
