@@ -4,7 +4,7 @@ client = chromadb.PersistentClient()
 collection = client.get_or_create_collection(name="videos")
 
 
-def add_embedding(embedding, filepath: str, timestamp: int):
+def add_embedding(embedding, filepath: str, timestamp: float):
     collection.add(
         embeddings=tensor_to_embedding(embedding),
         metadatas=[{"filepath": filepath, "timestamp": timestamp}],
