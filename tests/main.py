@@ -2,6 +2,7 @@ from imagebind import data
 import torch
 from imagebind.models import imagebind_model
 from imagebind.models.imagebind_model import ModalityType
+from torch import Tensor
 
 
 def main():
